@@ -1,0 +1,55 @@
+*, 
+      *::before,
+      *::after {
+        margin: 0;
+        box-sizing: border-box;
+      } 
+
+html {
+    background-color: white;
+}
+
+/* header css */
+
+header {
+    
+    width: 100vw;
+    height: 120px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    position: fixed;
+   
+}
+
+.div--left .div--right {
+    width: 20vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.ribbon {
+    background-color: #111419;
+    height: 200px;
+    width: 120px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+}
+
+a {
+    color: #111419;
+    font-family: sans-serif;
+    text-decoration: none;
+    margin: 2rem;
+}
+
