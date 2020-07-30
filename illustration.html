@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+     <!-- My CSS -->
+     <link href="style/style.css" rel="stylesheet">
+    <!-- font CSS -->
+    <link rel="stylesheet" href="/font/stylesheet.css"> 
+
+    <title>C L SMITH</title>
+
+    <!-- import * as basicLightbox from 'basiclightbox'
+
+const instance = basicLightbox.create(`
+    <img src="assets/images/image.png" width="800" height="600">
+`)
+
+instance.show()
+
+
+
+    <style> -->
+
+    <style> 
+
+        section {
+            padding: 0;
+        }
+
+        .lightbox {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+        display: none
+    }
+
+    .lightbox.active {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+   
+    .lightbox img {
+        max-width: 900px;
+        max-height: 100%;
+        padding: 4px;
+        background-color: #cf302b;
+    }
+
+    .works {
+        cursor: pointer
+    }
+
+    @media screen and (max-width: 850px) {
+
+        .lightbox img {
+            width: 80vw;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+    
+<header>
+
+<div class="nav">
+<a href="index.html">home</a>
+<a href="resume.html">resume</a> 
+<div class="ribbon">
+<img src="assets/logo-w-r.png" alt="">
+</div>
+    <a href="contact.html">contact</a>
+    <a href="design.html">design</a>
+</div>
+
+<div class="mobile-nav" role="navigation">
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <a href="index.html"><li>home</li></a>
+            <a href="resume.html"><li>resume</li></a>
+            <a href="contact.html"><li>contact</li></a>
+            <a href="design.html"><li>design</li></a>
+        </ul>
+    </div>
+</div>
+</header>
+
+
+<section>
+
+    <div class="port-grid works">
+     
+        <div><img src="images/illustration/c-1.jpg" data-big="images/illustration/i-1.JPG" alt=""></div>
+        <div><img src="images/illustration/c-2.jpg" data-big="images/illustration/i-2.jpg" alt=""></div>
+        <div><img src="images/illustration/c-3.jpg" data-big="images/illustration/i-3.jpg" alt=""></div>
+        <div><img src="images/illustration/c-4.jpg" data-big="images/illustration/i-4.jpg" alt=""></div>
+        <div><img src="images/illustration/c-5.jpg" data-big="images/illustration/i-5.jpg" alt=""></div>
+        <div><img src="images/illustration/c-6.jpg" data-big="images/illustration/i-6.jpg" alt=""></div>
+        <div><img src="images/illustration/c-7.jpg" data-big="images/illustration/i-7.jpg" alt=""></div>
+        <div><img src="images/illustration/c-8.jpg" data-big="images/illustration/i-8.jpg" alt=""></div>
+
+    </div>
+
+    
+
+</section>
+<div class="lightbox">    
+</div>
+
+<footer>
+    <h2>clsmith 7/2020</h2>
+</footer>
+
+
+
+<script>
+    const images = document.querySelectorAll('.works')
+    var lightbox = document.querySelector('.lightbox')
+
+    images.forEach(image => {
+    image.addEventListener('click', e => {
+        lightbox.classList.add('active')
+        const img = document.createElement('img')
+        img.src = e.target.dataset.big
+        while (lightbox.firstChild) {
+        lightbox.removeChild(lightbox.firstChild)
+        }
+        lightbox.appendChild(img)
+    })
+    })
+
+    lightbox.addEventListener('click', e => {
+    if (e.target !== e.currentTarget) return
+    lightbox.classList.remove('active')
+    })
+
+</script>
+
+</body>
+</html>
